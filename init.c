@@ -7,10 +7,11 @@
 int main(int argc, char *argv[]){
   (void) initscr(); // initialize the curses lib
 
-  mvaddch(0, 0, 'a');
-  mvaddch(1, 1, 'b');
-  mvaddch(2, 2, 'c');
-  mvaddch(3, 3, 'd');
+  mvaddch(0, 0, 'h');
+  mvaddch(1, 1, 'e');
+  mvaddch(2, 2, 'l');
+  mvaddch(3, 3, 'l');
+  mvaddch(4, 4, 'o');
 
   refresh();
 
@@ -20,11 +21,11 @@ int main(int argc, char *argv[]){
   init_pair(2, COLOR_WHITE, COLOR_BLACK);
   
   attron(COLOR_PAIR(1));
-  mvaddch(4, 4, 'e');
+  mvaddch(5, 5, '!');
   attroff(COLOR_PAIR(1));
   
   attron(COLOR_PAIR(2));
-  mvprintw(5, 5, "hi!", stdscr);
+  mvprintw(6, 0, "hi!", stdscr);
   attroff(COLOR_PAIR(2));
 
   refresh();
